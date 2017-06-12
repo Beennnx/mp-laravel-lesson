@@ -68,12 +68,14 @@
 
 .list-item-content {
   font-size: 15px;
-  color: #d3d3d3;  
+  color: #d3d3d3; 
+  margin-top: 10rpx; 
 }
 
 .list-item-foot {
   font-size: 12px;
   align-self: flex-end;
+  margin-top: 10rpx;
 }
 
 .line {
