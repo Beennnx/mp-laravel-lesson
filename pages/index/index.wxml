@@ -1,0 +1,33 @@
+<!--pages/index/index.wxml-->
+<view class="contanier">
+  <!--轮播图  -->
+  <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  
+  </view>
+  <!--消息通知 -->
+  <view class="notice">
+    <image src="../../img/icon-radio.png" class="notice-img"></image>
+    <text class="notice-title">最新通知:</text>
+    <text class="notice-content">第一期课程已经转码完成，欢迎观看</text>
+  </view>
+  <!--课程列表-->
+  <view class="list" wx:for="{{ lessons }}">
+    <view class="list-item" >
+      <image src="../../img/cover-4.jpg" class="list-item-img"></image>
+      <view class="list-item-right">
+        <text class="list-item-title">{{ item.title }}</text>
+        <text class="list-item-content">{{ item.content }}</text>
+        <text class="list-item-foot">by \t {{ item.author }}</text>
+      </view>
+    </view>
+    <view class="line"></view>
+  </view>
+</view>

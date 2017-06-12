@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/content/content",
+    "pages/problem/problem"
+  ],
+  "window":{
+    "backgroundColor": "#000000",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Zen Tutorial",
+    "navigationBarTextStyle": "white"
+  },
+   "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "img/icon-home.png",
+          "selectedIconPath":"img/icon-home-a.png"
+        },
+        {
+          "pagePath": "pages/content/content",
+          "text": "内容",
+          "iconPath": "img/icon-ask.png",
+          "selectedIconPath": "img/icon-ask-a.png"
+        }
+      ]
+    }
+}
