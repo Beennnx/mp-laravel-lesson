@@ -1,0 +1,16 @@
+<form class="form">
+
+   <view class="input">
+    <view class="input_title">邮箱</view>
+    <input name="input"  bindinput="bindEmailInput" class="input_content"/>
+  </view>
+
+  <view class="input">
+    <view class="input_title">密码</view>
+    <input name="input" password="true" bindinput="bindPasswordInput" class="input_content"/>
+  </view>
+  
+  <view class="btn">
+    <button class="submit" type="primary"  bindtap="login" disabled="{{ disabled }}">登录</button>
+  </view>
+</form>

@@ -1,0 +1,38 @@
+/* pages/login/login.wxss */
+
+page {
+  background-color: #EFEFF4;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200rpx;
+}
+
+.input {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px solid #f7f7f7;
+}
+
+.input_title {
+  width:85px;
+  font-size: 17pt;
+  padding: 10rpx;
+  text-align: center;
+}
+
+.input_content {
+  font-size: 17pt;
+  padding: 10rpx;
+}
+
+.btn {
+  margin-top: 20rpx;
+}

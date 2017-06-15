@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/content/content",
-    "pages/problem/problem"
+    "pages/login/login",
+    "pages/about/about"
   ],
   "window":{
     "backgroundColor": "#000000",
@@ -19,8 +20,8 @@
           "selectedIconPath":"img/icon-home-a.png"
         },
         {
-          "pagePath": "pages/content/content",
-          "text": "内容",
+          "pagePath": "pages/about/about",
+          "text": "关于",
           "iconPath": "img/icon-ask.png",
           "selectedIconPath": "img/icon-ask-a.png"
         }

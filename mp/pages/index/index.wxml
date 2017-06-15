@@ -10,24 +10,44 @@
         </swiper-item>
       </block>
     </swiper>
-  
   </view>
+  
   <!--消息通知 -->
   <view class="notice">
     <image src="../../img/icon-radio.png" class="notice-img"></image>
-    <text class="notice-title">最新通知:</text>
-    <text class="notice-content">第一期课程已经转码完成，欢迎观看</text>
-  </view>
-  <!--课程列表-->
-  <view class="list" wx:for="{{ lessons }}">
-    <view class="list-item" >
-      <image src="../../img/cover-4.jpg" class="list-item-img"></image>
-      <view class="list-item-right">
-        <text class="list-item-title">{{ item.title }}</text>
-        <text class="list-item-content">{{ item.content }}</text>
-        <text class="list-item-foot">by \t {{ item.author }}</text>
-      </view>
+    <!--消息垂直滚动显示-->
+    <view class="notice-body">
+      <scroll-view scroll-y="true" scroll-top="{{ scrollTop }}"  class="scroll-view-h" scroll-with-animation="true" >
+          <view wx:for="{{ notices }}" class="scroll-item"> {{ item }}</view>
+        </scroll-view>
     </view>
-    <view class="line"></view>
   </view>
+
+
+  <!--课程列表-->
+  <view class="loading" hidden="{{! lessonsLoading}}">正在加载数据...</view>  
+   <scroll-view scroll-y="true"  bindscrolltoupper="upperLessons" bindscrolltolower="lowerLessons" class="lists">
+   
+    <view  wx:for="{{ lessons }}">
+      <navigator class="list-item" url="../content/content?id={{item.id}}&is_free={{ item.is_free }}">
+        <image src="../../img/cover-4.jpg" class="list-item-img"></image>
+
+        <view class="list-item-right">
+          <view class="list-item-header">
+            <text class="list-item-title"> {{ item.title }}</text>
+            <text class="free" wx:if="{{ item.is_free}}">免费</text>
+          </view>
+          <text class="list-item-content">{{ item.content }}</text>
+          <text class="list-item-foot">by \t {{ item.author }}</text>
+        </view>
+      </navigator>
+      <view class="line"></view>
+    </view>
+
+  </scroll-view>
+
+  <view class="loading" hidden="{{! lessonsLoading}}">正在加载数据...</view>  
+  <view class="loading" hidden="{{! isLastPage}}">已是最后一页...</view>
+
+
 </view>

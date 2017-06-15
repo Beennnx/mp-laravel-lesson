@@ -1,1 +1,22 @@
 /* pages/content/content.wxss */
+@import "/wxParse/wxParse.wxss";
+.header {
+  margin: 20rpx;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.header-title text {
+  font-size: 17pt;
+}
+
+.header-author {
+  text-align: right;
+}
+
+.header-author text {
+   font-size: 14pt;
+}
+
